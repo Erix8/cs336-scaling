@@ -1,0 +1,75 @@
+\Needspace{12\baselineskip}
+\section{Constructing Scaling Laws Leaderboard}
+\label{sec:scaling-laws}
+
+\problem{scaling\_laws}{Constructing Scaling Laws Leaderboard}{50}
+
+Construct a scaling law from training API experiments within the 12 B200-hour fitting budget. Use it to predict a model configuration and validation loss for the 48 B200-hour target run.
+
+\subsection{Experimental Design and Run Selection}
+Describe how the API runs were selected, how the 12 B200-hour budget was allocated, and how model size, token count, and other hyperparameters were varied.
+\answer
+
+\subsection{Scaling-Law Fitting Method}
+Describe the concrete fitting method or methods, including the functional form, data transformations, fitting procedure, and how model size and training tokens are related to compute.
+\answer
+
+\subsection{Fit Quality and Diagnostics}
+Report how well the scaling law fits the observed runs and include the plots or diagnostics used to assess the fit.
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][2in][c]{0.88\textwidth}{\centering Experimental data and fitted scaling-law plot placeholder}}
+\caption{Validation loss and fitted scaling law. Replace with the plot or plots supporting the fit assessment.}
+\label{fig:scaling-law-fit}
+\end{figure}
+\answer
+
+\subsection{48 B200-Hour Prediction}
+State the predicted optimal parameter count and validation loss for the target compute budget, and explain how the prediction follows from the fitted law.
+\answer
+
+\subsection{Predicted Model Configuration}
+Give the architecture and training hyperparameters for the predicted model. Include the parameter-count calculation used to map the target non-embedding parameter count to a concrete configuration.
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}ll@{}}
+\toprule
+Hyperparameter & Predicted value \\
+\midrule
+Number of layers & \\
+Model dimension & \\
+Number of attention heads & \\
+Head dimension & \\
+Intermediate dimension & \\
+Training batch size & \\
+Training tokens & \\
+Peak learning rate & \\
+Other settings & \\
+\bottomrule
+\end{tabular}
+\caption{Predicted configuration for the 48 B200-hour run. Add or adjust rows as needed.}
+\label{tab:predicted-config}
+\end{table}
+\answer
+
+\subsection{Hyperparameter Decisions}
+Explain how smaller-scale experiments informed the choice of hyperparameters for the predicted model and discuss the decisions made for each factor.
+\answer
+
+\subsection{Final Prediction Summary}
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}lr@{}}
+\toprule
+Quantity & Prediction \\
+\midrule
+Target compute budget & 48 B200-hours \\
+Optimal non-embedding parameter count & \\
+Training token count & \\
+Predicted validation loss & \\
+\bottomrule
+\end{tabular}
+\caption{Summary of the leaderboard prediction.}
+\label{tab:leaderboard-prediction}
+\end{table}
+\answer

@@ -1,0 +1,41 @@
+\Needspace{12\baselineskip}
+\section{IsoFLOPs Scaling Laws}
+\label{sec:isoflops}
+
+\problem{chinchilla\_isoflops}{IsoFLOPs Scaling Laws}{5}
+
+Use the supplied synthetic runs in \texttt{data/isoflops\_curves.json}. For each compute budget, identify the run with the lowest final training loss, derive its model size and dataset size, and fit power laws for the compute-optimal model and dataset sizes.
+
+\partquestion{a}{Show the compute-optimal model-size points and fitted scaling law. Extrapolate to budgets of $10^{23}$ and $10^{24}$ FLOPs.}
+\deliverable{A plot showing the fitted model-size scaling law, the data points used to fit it, and extrapolation through at least $10^{24}$ FLOPs; plus a one-sentence prediction for each requested budget.}
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][2in][c]{0.88\textwidth}{\centering Model-size scaling-law plot placeholder}}
+\caption{Compute-optimal model size as a function of compute budget. Replace with the generated plot.}
+\label{fig:isoflops-model-size}
+\end{figure}
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{@{}rrrr@{}}
+\toprule
+Compute budget $C$ (FLOPs) & $N_{\mathrm{opt}}$ (parameters) & $D_{\mathrm{opt}}$ (tokens) & Final loss \\
+\midrule
+ & & & \\
+ & & & \\
+ & & & \\
+\bottomrule
+\end{tabular}
+\caption{Lowest-loss run selected from each IsoFLOPs profile. Add one row per compute budget.}
+\label{tab:isoflops-optima}
+\end{table}
+\answer
+
+\partquestion{b}{Show the compute-optimal dataset-size points and fitted scaling law. Extrapolate to budgets of $10^{23}$ and $10^{24}$ FLOPs.}
+\deliverable{A plot showing the fitted dataset-size scaling law, the data points used to fit it, and extrapolation through at least $10^{24}$ FLOPs; plus a one-sentence prediction for each requested budget.}
+\begin{figure}[htbp]
+\centering
+\fbox{\parbox[c][2in][c]{0.88\textwidth}{\centering Dataset-size scaling-law plot placeholder}}
+\caption{Compute-optimal dataset size as a function of compute budget. Replace with the generated plot.}
+\label{fig:isoflops-dataset-size}
+\end{figure}
+\answer
